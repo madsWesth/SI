@@ -1,3 +1,0 @@
-name: Mads
-age: 23
-hobbies: [sport1,sport2]

@@ -1,9 +1,0 @@
-<?xml version=\"1.0\" encoding=\"UTF-8\"?>
-<me>
-    <name>Mads</name>
-    <age>25</age>
-    <hobbies>
-        <hobby>sport1</hobby>
-        <hobby>sport2</hobby>
-    </hobbies>
-</me>
