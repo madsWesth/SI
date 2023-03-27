@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timestamps</title>
+</head>
+<body>
+    <h2>Time</h2>
+
+    <h3>From Fastapi</h3>
+    <div id="timestamp-fastapi"></div>
+
+    <h3>From node</h3>
+    <div id="timestamp-node"></div>
+
+    <script>
+        fetch("http://localhost:8000/timestamp")
+        .then(res => res.json())
+        .then(result => {
+            const timestampFastAPIDiv = document.getElementById("timestamp-fastapi")
+            timestampFastAPIDiv.innerText = result;
+        })
+        fetch("http://localhost:8080/timestamp")
+        .then(res => res.json())
+        .then(result => {
+            const timestampNodeDiv = document.getElementById("timestamp-node")
+            timestampNodeDiv.innerText = result;
+        })
+    </script>
+    
+</body>
+</html>
