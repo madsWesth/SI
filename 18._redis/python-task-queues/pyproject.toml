@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "python-task-queues"
+version = "0.1.0"
+description = ""
+authors = ["madsWesth <72575386+madsWesth@users.noreply.github.com>"]
+readme = "README.md"
+packages = [{include = "python_task_queues"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+redis = "^4.5.4"
+rq = "^1.14.1"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
