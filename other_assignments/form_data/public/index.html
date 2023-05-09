@@ -8,17 +8,24 @@
     <script src="index.js" defer></script>
   </head>
   <body>
+    <h3>Form data with html:</h3>
     <form
       action="/file-upload"
       method="post"
       enctype="multipart/form-data"
       id="html-form-data"
     >
-      <label for="file-input-label"
-        >File:
+      <label for="html-form-data-name-input">
+        Given Name:
+        <input type="text" name="givenName" id="html-form-data-name-input" />
+      </label>
+      <br />
+
+      <label for="html-form-data-submit"
+        >File(s):
         <input
           type="file"
-          name="file-input"
+          name="files"
           id="html-form-data-submit"
           required
           multiple
@@ -32,12 +39,22 @@
 
     <h3>Form data with js:</h3>
     <div>
-      <input
-        type="file"
-        name="file-input-js"
-        multiple
-        id="js-form-data-input"
-      />
+      <label for="js-form-data-name-input">
+        Given Name:
+        <input type="text" name="givenName" id="js-form-data-name-input" />
+      </label>
+      <br />
+
+      <label for="js-form-data-file-input">
+        File(s):
+        <input
+          type="file"
+          name="file-input-js"
+          multiple
+          id="js-form-data-file-input"
+        />
+      </label>
+
       <button id="js-form-data-submit">File submit with js</button>
     </div>
   </body>

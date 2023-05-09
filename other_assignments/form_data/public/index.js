@@ -1,15 +1,25 @@
-const jsFormInput = document.getElementById("js-form-data-input");
+const jsFormNameInput = document.getElementById("js-form-data-name-input");
+const jsFormFileInput = document.getElementById("js-form-data-file-input");
 
 const handleFormData = () => {
   const formData = new FormData();
 
-  const files = Object.values(jsFormInput.files);
+  const inputName = jsFormNameInput.value;
+  if (inputName) {
+    formData.append("givenName", inputName);
+  }
 
-  console.log(files);
-  if (Array.isArray(files)) {
-    files.forEach((file, i) => {
-      formData.append(`file${i}`, file);
+  const fileList = jsFormFileInput.files;
+  const files = Object.values(fileList);
+
+  if (Array.isArray(files) && files.length > 0) {
+    files.forEach((file) => {
+      formData.append(`files`, file);
     });
+  }
+
+  if (formData.has("givenName") || formData.has("files")) {
+    console.log(formData);
 
     fetch("/file-upload", {
       method: "POST",
