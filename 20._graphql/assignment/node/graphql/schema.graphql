@@ -49,6 +49,9 @@ type Mutation {
   createToken(email: String!, password: String!): TokenResult!
 }
 
-type Subscription {
-  reviewblog(token: String!): InsertResult!
-}
+# doing these would require me to rewrite the app because it is not supported by startStandaloneServer from
+# apollo/server
+# event based "updates" can be sent over websockets protocol
+# type Subscription {
+#   reviewblog(token: String!): InsertResult!
+# }
