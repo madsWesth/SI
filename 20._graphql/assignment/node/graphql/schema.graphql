@@ -16,7 +16,6 @@ type blog {
   title: String!
   description: String!
   completed: Boolean!
-  ownerId: ID!
 }
 
 type blogResult {
