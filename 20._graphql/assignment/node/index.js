@@ -7,7 +7,7 @@ const typeDefs = fs.readFileSync("graphql/schema.graphql", "utf8");
 
 const server = new ApolloServer({
   typeDefs,
-  resolvers: resolvers,
+  resolvers,
 });
 
 const { url } = await startStandaloneServer(server, {
