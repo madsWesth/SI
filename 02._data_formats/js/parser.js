@@ -51,7 +51,7 @@ async function parseXML(path) {
   const data = await fs.readFile(path, "utf-8");
   const parser = new XMLParser();
   const parsedData = parser.parse(data);
-  console.log(parsedData, "\nconsole.log doesnt show deeply nested data");
+  console.log(parsedData.rows.row);
 }
 
 async function parseYAML(path) {

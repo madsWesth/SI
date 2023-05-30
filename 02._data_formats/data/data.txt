@@ -1,0 +1,3 @@
+name @string Mads
+age @number 25
+hobbies @array sport1,sport2
